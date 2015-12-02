@@ -90,8 +90,9 @@ function newMainWindow()
 	local bgCol = COL.MENUCONTENT_PLUS_0
 	if (bgTransp == true) then
 		showHeader = false
-		bgCol = bit32.band(0x00FFFFFF, bgCol)
-		bgCol = bit32.bor(0x60000000, bgCol)
+--		bgCol = bit32.band(0x00FFFFFF, bgCol)
+--		bgCol = bit32.bor(0x60000000, bgCol)
+		bgCol = (0x6000253E)
 	end
 
 	local ret = cwindow.new{x=x, y=y, dx=w, dy=h, color_body=bgCol, show_header=showHeader, show_footer=false, name=pluginName .. " - v" .. pluginVersion, icon=pluginIcon};
